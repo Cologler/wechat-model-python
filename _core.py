@@ -12,5 +12,5 @@ class _BaseModel:
             raise TypeError
         self._data = data
 
-    def _get(self, key): return self._data[key]
+    def _get(self, key): return self._data.get(key)
 
