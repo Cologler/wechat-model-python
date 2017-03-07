@@ -1,5 +1,7 @@
 # py.itchat.model
 
+**This library work on python 3.6.**
+
 ## How TO USE
 
 The library provide wrappers:
