@@ -122,6 +122,8 @@ NimbleText template (for methods):
 class MessageHandler(_BaseMessageHandler):
     '''inherit to create your custom handler.'''
     def __init__(self, core: wc.Core):
+        if not isinstance(core, wc.Core):
+            raise TypeError
         self._client = core
         self.friend_chat_handler.register_handler(core, True, False, False)
         self.group_chat_handler.register_handler(core, False, True, False)
