@@ -33,38 +33,38 @@ NimbleText template for $1:
 '''
 NimbleText template (for methods):
     def on_<% $1.toWords().replace(/[ ']/gm, '').toLowerCase() %>(self, msg):
-        pass
+        raise NotImplementedError
 '''
 class _BaseMessageHandler:
     # generated
     def on_text(self, msg):
-        pass
+        raise NotImplementedError
     def on_map(self, msg):
-        pass
+        raise NotImplementedError
     def on_card(self, msg):
-        pass
+        raise NotImplementedError
     def on_note(self, msg):
-        pass
+        raise NotImplementedError
     def on_sharing(self, msg):
-        pass
+        raise NotImplementedError
     def on_picture(self, msg):
-        pass
+        raise NotImplementedError
     def on_recording(self, msg):
-        pass
+        raise NotImplementedError
     def on_attachment(self, msg):
-        pass
+        raise NotImplementedError
     def on_video(self, msg):
-        pass
+        raise NotImplementedError
     def on_friends(self, msg):
-        pass
+        raise NotImplementedError
     def on_system(self, msg):
-        pass
+        raise NotImplementedError
     # generated end
 
 '''
 NimbleText template (for methods):
     def on_<% $1.toWords().replace(/[ ']/gm, '').toLowerCase() %>(self, msg):
-        self._parent.on_<% $1.toWords().replace(/[ ']/gm, '').toLowerCase() %>(msg)
+        return self._parent.on_<% $1.toWords().replace(/[ ']/gm, '').toLowerCase() %>(msg)
 
 NimbleText template (for register_handler):
         core.msg_register(wcc.<% $0.trim() %>, is_friend_chat, is_group_chat, is_mp_chat)(self.on_<% $1.toWords().replace(/[ ']/gm, '').toLowerCase() %>)
@@ -91,35 +91,35 @@ class TypedMessageHandler:
 
     # generated
     def on_text(self, msg):
-        self._parent.on_text(msg)
+        return self._parent.on_text(msg)
     def on_map(self, msg):
-        self._parent.on_map(msg)
+        return self._parent.on_map(msg)
     def on_card(self, msg):
-        self._parent.on_card(msg)
+        return self._parent.on_card(msg)
     def on_note(self, msg):
-        self._parent.on_note(msg)
+        return self._parent.on_note(msg)
     def on_sharing(self, msg):
-        self._parent.on_sharing(msg)
+        return self._parent.on_sharing(msg)
     def on_picture(self, msg):
-        self._parent.on_picture(msg)
+        return self._parent.on_picture(msg)
     def on_recording(self, msg):
-        self._parent.on_recording(msg)
+        return self._parent.on_recording(msg)
     def on_attachment(self, msg):
-        self._parent.on_attachment(msg)
+        return self._parent.on_attachment(msg)
     def on_video(self, msg):
-        self._parent.on_video(msg)
+        return self._parent.on_video(msg)
     def on_friends(self, msg):
-        self._parent.on_friends(msg)
+        return self._parent.on_friends(msg)
     def on_system(self, msg):
-        self._parent.on_system(msg)
+        return self._parent.on_system(msg)
     # generated end
 
 '''
 NimbleText template (for methods):
     def on_<% $1.toWords().replace(/[ ']/gm, '').toLowerCase() %>(self, msg):
-        self.on_any(msg)
+        return self.on_any(msg)
 '''
-class MessageHandler(TypedMessageHandler):
+class MessageHandler(_BaseMessageHandler):
     '''inherit to create your custom handler.'''
     def __init__(self, core: wc.Core):
         self._client = core
@@ -147,25 +147,25 @@ class MessageHandler(TypedMessageHandler):
 
     # generated
     def on_text(self, msg):
-        self.on_any(msg)
+        return self.on_any(msg)
     def on_map(self, msg):
-        self.on_any(msg)
+        return self.on_any(msg)
     def on_card(self, msg):
-        self.on_any(msg)
+        return self.on_any(msg)
     def on_note(self, msg):
-        self.on_any(msg)
+        return self.on_any(msg)
     def on_sharing(self, msg):
-        self.on_any(msg)
+        return self.on_any(msg)
     def on_picture(self, msg):
-        self.on_any(msg)
+        return self.on_any(msg)
     def on_recording(self, msg):
-        self.on_any(msg)
+        return self.on_any(msg)
     def on_attachment(self, msg):
-        self.on_any(msg)
+        return self.on_any(msg)
     def on_video(self, msg):
-        self.on_any(msg)
+        return self.on_any(msg)
     def on_friends(self, msg):
-        self.on_any(msg)
+        return self.on_any(msg)
     def on_system(self, msg):
-        self.on_any(msg)
+        return self.on_any(msg)
     # generated end

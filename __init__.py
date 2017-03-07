@@ -6,10 +6,12 @@
 #
 # ----------
 
+from .message import Message
 from .friend import Friend
 from .handler import (TypedMessageHandler, MessageHandler)
 
 __ALL__ = [
+    'Message',
     'Friend',
     'TypedMessageHandler', 'MessageHandler'
 ]
