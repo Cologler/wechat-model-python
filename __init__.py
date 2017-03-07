@@ -7,7 +7,9 @@
 # ----------
 
 from .friend import Friend
+from .handler import (TypedMessageHandler, MessageHandler)
 
 __ALL__ = [
-    'Friend'
+    'Friend',
+    'TypedMessageHandler', 'MessageHandler'
 ]
