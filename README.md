@@ -2,9 +2,11 @@
 
 **This library work on python 3.6.**
 
-## How TO USE
+## WHY USE THIS
 
-The library provide wrappers:
+The library provide strongly typed model for [itchat](https://github.com/littlecodersh/ItChat/) module.
+
+## HOW TO USE
 
 * MessageHandler
 * Message
