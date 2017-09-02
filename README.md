@@ -15,9 +15,9 @@ The library provide strongly typed model for [itchat](https://github.com/littlec
 ### MessageHandler
 
 ``` py
-import itchat_model
+import wechat_model
 
-class MessageHandler(itchat_model.MessageHandler):
+class MessageHandler(wechat_model.MessageHandler):
     # overwrite any of on_method() you want, like:
     def on_text(self, msg):
         m = Message(msg)
