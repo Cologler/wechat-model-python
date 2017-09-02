@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# Copyright (c) 2016 - cologler <skyoflw@gmail.com>
+# Copyright (c) 2017~2999 - cologler <skyoflw@gmail.com>
 # ----------
 #
 # ----------
 
-from ._core import _BaseModel
+
+from ._base import _BaseModel
 
 class _Generated(_BaseModel):
     @property
@@ -96,6 +97,3 @@ class _Generated(_BaseModel):
     @property
     def from_user_name(self):
         return self._get('FromUserName')
-
-class Message(_Generated):
-    pass
